@@ -40,8 +40,16 @@ video {
 	top: 50vh;
 	transform: translateY(-50%);
 }
-#inputs {
-	display: table;
+.input-group {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group > input {
+    background-color: #020000;
+    width: 55%;
+    place-items: inherit;
 }
 .btn{
 	background-color: #000;
