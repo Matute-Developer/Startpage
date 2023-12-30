@@ -13,20 +13,17 @@ const startTime = () => {
         startTime()
     }, 500);
 
-    if (hourNow > 0 && hourNow < 10) {
-        motivationText = '¡Buenos días! Hoy será una gran jornada.'
-    }
-    if (hourNow > 10 && hourNow < 12) {
-        motivationText = '¡Buena mañana! El día está arrancando, será genial.'
+    if (hourNow > 6 && hourNow < 12) {
+        motivationText = '¡Buenos días! Hoy vas a pegar buenas balas en el cs.'
     }
     if (hourNow > 12 && hourNow < 14) {
-        motivationText = '¡Provecho! Recordá alimentarte bien y tomar agua.'
+        motivationText = 'Empeza a tirar bien los fb y los smokes.'
     }
     if (hourNow > 14 && hourNow < 19) {
-        motivationText = '¡Buenas tardes! #StayFocused'
+        motivationText = '¡Buenas tardes! #Anda a jugar al cs'
     }
-    if (hourNow > 19 && hourNow <= 23) {
-        motivationText = '¡Buenas noches! Recordá alimentarte y descansar bien.'
+    if (hourNow > 19 && hourNow <= 6) {
+        motivationText = '¡Buenas noches! Recordá pajearte y descansar bien.'
     }
 }
 
