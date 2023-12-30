@@ -1,84 +1,83 @@
-* {
+{
     border: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Helvetica', sans-serif;
-    background-color: #000000; /* Color de fondo si fallan las partículas */
+    background-color: #141518; / if particles fail /
     overflow-y: hidden;
-}
 
+}
 video {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: auto;
-    z-index: -1;
-}
-
+    width: 100%; / O ajusta según tus necesidades /
+    height: auto; / O ajusta según tus necesidades /
+    z-index: -1; / Para asegurarse de que esté detrás del contenido */
+  }
 .container {
     padding: 0;
     width: fit-content;
     transform: translateY(-8rem);
 }
-
-#clock {
+#clock{
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     font-weight: 800;
     font-size: 7.5rem;
 }
-
 #content {
     padding: 4rem;
+ 
 }
-
 .vcenter {
     position: relative;
     top: 50vh;
     transform: translateY(-50%);
 }
-
 .input-group {
     margin-bottom: 3rem;
     display: flex;
     justify-content: center;
 }
-
 .input-group > input {
     background-color: #020000;
-    width: 57%; /* Ajusta según tus necesidades */
+    width: 55%;
+    place-items: inherit;
 }
-
-.btn {
-    background-color: #000000;
+.btn{
+    background-color: #000;
     border: none;
-    color: #ffffff;
+    color: #fff;
     font-size: 1.7rem;
 }
-
 .btn-group {
     margin-top: 15px;
     margin-bottom: 20px;
 }
-
-#motivationDiv {
+#motivationDiv{
     color: #fff;
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: center;
     font-weight: 700;
     font-size: 1.6rem;
 }
-
 h1 {
     font-size: 5em;
     margin-bottom: 0;
 }
-
-footer {
+h2 {
+    font-size: 3em;
+    margin-top: 5px;
+}
+h3 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+footer{
     text-align: center;
     margin-top: 3em;
     color: #fff;
@@ -86,15 +85,12 @@ footer {
     z-index: 100;
     font-size: 1rem;
 }
-
-footer a {
-    color: #ffffff;
+footer a{
+    color: #fff;
 }
-
-footer a:hover {
-    color: #fdfafa;
+footer a:hover{
+    color: #fff;
 }
-
-#busqueda {
+#busqueda{
     width: 57%;
 }
