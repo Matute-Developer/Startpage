@@ -1,4 +1,4 @@
-{
+*{
     border: 0;
     margin: 0;
     box-sizing: border-box;
@@ -47,7 +47,7 @@ video {
     width: 55%;
     place-items: inherit;
 }
-.btn{
+.btn {
     background-color: #000;
     border: none;
     color: #fff;
@@ -57,7 +57,7 @@ video {
     margin-top: 15px;
     margin-bottom: 20px;
 }
-#motivationDiv{
+#motivationDiv {
     color: #fff;
     margin-top: 2rem;
     margin-bottom: 1rem;
