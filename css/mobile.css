@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
-    background-color: #000000; /* if particles fail */
+    background-color: #000000; /* Color de fondo si fallan las partículas */
     overflow-y: hidden;
 }
 
@@ -21,14 +21,14 @@ video {
 .container {
     padding: 0;
     width: fit-content;
-	transform: translateY(-8rem);
+    transform: translateY(-8rem);
 }
 
 #clock {
     text-align: center;
     color: #ffffff;
     font-weight: 800;
-	font-size: 7.5rem;
+    font-size: 7.5rem;
 }
 
 #content {
@@ -49,15 +49,14 @@ video {
 
 .input-group > input {
     background-color: #020000;
-    width: 55%;
-    place-items: inherit;
+    width: 57%; /* Ajusta según tus necesidades */
 }
 
 .btn {
     background-color: #000000;
     border: none;
     color: #ffffff;
-	font-size: 1.7rem;
+    font-size: 1.7rem;
 }
 
 .btn-group {
@@ -71,7 +70,7 @@ video {
     margin-bottom: 1rem;
     text-align: center;
     font-weight: 700;
-	font-size: 1.6rem;
+    font-size: 1.6rem;
 }
 
 h1 {
@@ -82,7 +81,7 @@ h1 {
 footer {
     text-align: center;
     margin-top: 3em;
-    color: #fff9f9;
+    color: #fff;
     position: relative;
     z-index: 100;
     font-size: 1rem;
@@ -95,6 +94,7 @@ footer a {
 footer a:hover {
     color: #fdfafa;
 }
-#busqueda{
-	width: 57%;
+
+#busqueda {
+    width: 57%;
 }
