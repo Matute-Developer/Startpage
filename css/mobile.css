@@ -1,45 +1,46 @@
-*{
-	border: 0;
-	margin: 0;
-	box-sizing: border-box;
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: 'Helvetica', sans-serif;
-	background-color: #141518; /* if particles fail */
-	overflow-y: hidden;
-
+    font-family: 'Helvetica', sans-serif;
+    background-color: #000000; /* if particles fail */
+    overflow-y: hidden;
 }
 
 video {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	width: 100%; /* O ajusta según tus necesidades */
-	height: auto; /* O ajusta según tus necesidades */
-	z-index: -1; /* Para asegurarse de que esté detrás del contenido */
-  }
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    z-index: -1;
+}
 
 .container {
-	padding: 0;
-	width: fit-content;
+    padding: 0;
+    width: fit-content;
 	transform: translateY(-8rem);
 }
-#clock{
-	text-align: center;
-	color: #fff;
-	font-weight: 800;
+
+#clock {
+    text-align: center;
+    color: #ffffff;
+    font-weight: 800;
 	font-size: 7.5rem;
 }
+
 #content {
-	padding: 4rem;
- 
+    padding: 4rem;
 }
+
 .vcenter {
-	position: relative;
-	top: 50vh;
-	transform: translateY(-50%);
+    position: relative;
+    top: 50vh;
+    transform: translateY(-50%);
 }
+
 .input-group {
     margin-bottom: 3rem;
     display: flex;
@@ -51,51 +52,48 @@ video {
     width: 55%;
     place-items: inherit;
 }
-.btn{
-	background-color: #000;
-	border: none;
-	color: #fff;
+
+.btn {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
 	font-size: 1.7rem;
 }
 
-
 .btn-group {
-	margin-top: 15px;
-	margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
-#motivationDiv{
-	color: #fff;
-	margin-top: 2rem;
-	margin-bottom: 1rem;
-	text-align: center;
-	font-weight: 700;
+
+#motivationDiv {
+    color: #fff;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
 	font-size: 1.6rem;
 }
+
 h1 {
-	font-size: 5em;
-	margin-bottom: 0;
+    font-size: 5em;
+    margin-bottom: 0;
 }
-h2 {
-	font-size: 3em;
-	margin-top: 5px;
+
+footer {
+    text-align: center;
+    margin-top: 3em;
+    color: #fff9f9;
+    position: relative;
+    z-index: 100;
+    font-size: 1rem;
 }
-h3 {
-	font-size: 2em;
-	margin-top: 10px;
+
+footer a {
+    color: #ffffff;
 }
-footer{	
-	text-align: center;
-	margin-top: 3em;
-	color: #fff;
-	position: relative;
-	z-index: 100;
-	font-size: 1rem;
-}
-footer a{
-	color: #fff;
-}
-footer a:hover{
-	color: #fff;
+
+footer a:hover {
+    color: #fdfafa;
 }
 #busqueda{
 	width: 57%;
