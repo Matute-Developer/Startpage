@@ -12,16 +12,16 @@ const startTime = () => {
     let s = checkTime(secondsNow);
     document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
 
-    if (hourNow > 6 && hourNow < 11) {
+    if (hourNow >= 6 && hourNow < 12) {
         motivationText = '¡Buenos días! Hoy vas a pegar buenas balas en el cs.';
     }
-    if (hourNow > 12 && hourNow < 14) {
+    if (hourNow >= 12 && hourNow < 14) {
         motivationText = 'Empeza a tirar bien los fb y los smokes.';
     }
-    if (hourNow > 14 && hourNow < 19) {
+    if (hourNow >= 14 && hourNow < 20) {
         motivationText = '¡Buenas tardes! #Anda a jugar al cs';
     }
-    if (hourNow > 19 && hourNow <= 5) {
+    if (hourNow >= 20 && hourNow <= 5) {
         motivationText = '¡Buenas noches! Recordá pajearte y descansar bien.';
     }
 
