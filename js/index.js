@@ -12,7 +12,7 @@ const startTime = () => {
     let s = checkTime(secondsNow);
     document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
 
-    if (hourNow >= 5 && hourNow < 12) {
+    if (hourNow >= 6 && hourNow < 12) {
         motivationText = '¡Buenos días! Hoy vas a pegar buenas balas en el cs.';
     }
     else if (hourNow >= 12 && hourNow < 14) {
