@@ -12,11 +12,13 @@ body {
 video {
     position: fixed;
     bottom: 0;
-    left: 0;
-    width: 100%; / O ajusta según tus necesidades /
-    height: auto; / O ajusta según tus necesidades /
-    z-index: -1; / Para asegurarse de que esté detrás del contenido */
-  }
+    left: 50%;
+    width: auto; /* O ajusta según tus necesidades */
+    height: auto; /* O ajusta según tus necesidades */
+    z-index: -1; /* Para asegurarse de que esté detrás del contenido */
+    transform: translateX(-50%) scale(1.2) translateY(-10%); /* Ajusta el valor de scale y translateY según tus necesidades */
+}
+
 .container {
     padding: 0;
     width: fit-content;
