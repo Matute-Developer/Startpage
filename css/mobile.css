@@ -16,7 +16,7 @@ video {
     width: auto;
     height: auto;
     z-index: -1;
-    transform: translateX(-50%) scale(1.2) translateY(16%);
+    transform: translateX(-50%) scale(1.2) translateY(16%); /* 16% */
 }
 
 .container {
