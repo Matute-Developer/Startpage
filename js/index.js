@@ -13,13 +13,13 @@ const startTime = () => {
     document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
 
     if (hourNow >= 6 && hourNow < 12) {
-        motivationText = '¡Buenos días! Hoy vas a pegar buenas balas en el cs.';
+        motivationText = '¡Buenos días!.';
     }
     else if (hourNow >= 12 && hourNow < 14) {
-        motivationText = 'Empezá a tirar bien los fb y los smokes.';
+        motivationText = 'llego el MALANDRAJEE.';
     }
     else if (hourNow >= 14 && hourNow < 20) {
-        motivationText = '¡Buenas tardes! #Andá a jugar al cs';
+        motivationText = '¡Buenas tardes! Zaramay la tiene chikitita';
     }
     else {
         motivationText = '¡Buenas noches! Recordá pajearte y descansar bien.';
