@@ -1,3 +1,7 @@
+#imagen 
+{
+    position: absolute;
+}
 *{
     border: 0;
     margin: 0;
@@ -85,9 +89,4 @@ footer a:hover{
 }
 #busqueda{
     width: 57%;
-}
-#imagen 
-{
-
-    position: absolute;
 }
