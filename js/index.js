@@ -19,7 +19,7 @@ const startTime = () => {
         motivationText = 'Santi la remerita pa que vasilee';
     }
     else if (hourNow >= 14 && hourNow < 20) {
-        motivationText = 'Shinpei';
+        motivationText = 'Nacho te amo todo mi amor';
     }
     else {
         motivationText = 'CAMPEO Y TUNELEO';
