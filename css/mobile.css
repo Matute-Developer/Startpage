@@ -60,7 +60,7 @@ body {
 }
 
 .btn {
-    background-color: #000;
+    background-color: transparent;
     border: none;
     color: #fff;
     font-size: 1.7rem;
@@ -69,6 +69,7 @@ body {
 .btn-group {
     margin-top: 15px;
     margin-bottom: 20px;
+    background-color: transparent;
 }
 
 #motivationDiv {
