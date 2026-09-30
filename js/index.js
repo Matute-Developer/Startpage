@@ -13,16 +13,16 @@ const startTime = () => {
     document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
 
     if (hourNow >= 6 && hourNow < 12) {
-        motivationText = '¡Buenos días!.';
+        motivationText = 'A que te habla lautaro di lolioo';
     }
     else if (hourNow >= 12 && hourNow < 14) {
-        motivationText = 'llego el MALANDRAJEE.';
+        motivationText = 'Santi la remerita pa que vasilee';
     }
     else if (hourNow >= 14 && hourNow < 20) {
-        motivationText = '¡Buenas tardes! Zaramay la tiene chikitita';
+        motivationText = 'Shinpei';
     }
     else {
-        motivationText = '¡Buenas noches! Recordá pajearte y descansar bien.';
+        motivationText = 'CAMPEO Y TUNELEO';
     }
     
 
