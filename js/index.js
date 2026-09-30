@@ -43,8 +43,12 @@ const configToggle = document.getElementById('image-config-toggle');
 const displaySelect = document.getElementById('image-display');
 const opacityInput = document.getElementById('image-opacity');
 const opacityValue = document.getElementById('image-opacity-value');
+const positionXInput = document.getElementById('image-position-x');
+const positionXValue = document.getElementById('image-position-x-value');
+const positionYInput = document.getElementById('image-position-y');
+const positionYValue = document.getElementById('image-position-y-value');
 const backgroundColorInput = document.getElementById('background-color');
-const defaultBackgroundSettings = { display: 'cover', opacity: 100, color: '#fefeff' };
+const defaultBackgroundSettings = { display: 'cover', opacity: 100, positionX: 50, positionY: 50, color: '#fefeff' };
 
 function readBackgroundSettings() {
     try {
@@ -65,18 +69,27 @@ function saveBackgroundSettings(settings) {
 function applyBackgroundSettings(settings) {
     const display = ['center', 'tile', 'contain', 'cover'].includes(settings.display) ? settings.display : defaultBackgroundSettings.display;
     const opacity = Math.min(100, Math.max(0, Number(settings.opacity) || 0));
+    const positionX = Math.min(100, Math.max(0, Number(settings.positionX) || 0));
+    const positionY = Math.min(100, Math.max(0, Number(settings.positionY) || 0));
     const color = /^#[0-9a-f]{6}$/i.test(settings.color) ? settings.color : defaultBackgroundSettings.color;
     background.className = 'background-' + display;
     document.body.classList.toggle('background-tile', display === 'tile');
     document.documentElement.style.setProperty('--background-opacity', opacity / 100);
     document.documentElement.style.setProperty('--background-image', 'url("' + background.src + '")');
     document.documentElement.style.setProperty('--background-color', color);
+    document.documentElement.style.setProperty('--background-position', positionX + '% ' + positionY + '%');
     displaySelect.value = display;
     opacityInput.value = opacity;
     opacityValue.value = opacity + '%';
     opacityValue.textContent = opacity + '%';
+    positionXInput.value = positionX;
+    positionXValue.value = positionX + '%';
+    positionXValue.textContent = positionX + '%';
+    positionYInput.value = positionY;
+    positionYValue.value = positionY + '%';
+    positionYValue.textContent = positionY + '%';
     backgroundColorInput.value = color;
-    return { display, opacity, color };
+    return { display, opacity, positionX, positionY, color };
 }
 
 let backgroundSettings = applyBackgroundSettings(readBackgroundSettings());
@@ -97,6 +110,16 @@ opacityInput.addEventListener('input', () => {
     backgroundSettings = applyBackgroundSettings(backgroundSettings);
     saveBackgroundSettings(backgroundSettings);
 });
+
+function updateImagePosition() {
+    backgroundSettings.positionX = positionXInput.value;
+    backgroundSettings.positionY = positionYInput.value;
+    backgroundSettings = applyBackgroundSettings(backgroundSettings);
+    saveBackgroundSettings(backgroundSettings);
+}
+
+positionXInput.addEventListener('input', updateImagePosition);
+positionYInput.addEventListener('input', updateImagePosition);
 
 backgroundColorInput.addEventListener('input', () => {
     backgroundSettings.color = backgroundColorInput.value;
