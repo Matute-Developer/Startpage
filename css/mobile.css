@@ -6,7 +6,8 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
-    object-position: center 20%;
+    transform: scale(1.3);
+    transform-origin: center top;
 }
 
 *{
