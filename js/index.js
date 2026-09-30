@@ -36,6 +36,74 @@ const startTime = () => {
 
 window.addEventListener('load', startTime);
 
+const backgroundSettingsKey = 'startpage.backgroundSettings';
+const background = document.getElementById('imagen');
+const imageConfig = document.getElementById('image-config');
+const configToggle = document.getElementById('image-config-toggle');
+const displaySelect = document.getElementById('image-display');
+const opacityInput = document.getElementById('image-opacity');
+const opacityValue = document.getElementById('image-opacity-value');
+const backgroundColorInput = document.getElementById('background-color');
+const defaultBackgroundSettings = { display: 'cover', opacity: 100, color: '#fefeff' };
+
+function readBackgroundSettings() {
+    try {
+        return { ...defaultBackgroundSettings, ...JSON.parse(localStorage.getItem(backgroundSettingsKey)) };
+    } catch (error) {
+        return defaultBackgroundSettings;
+    }
+}
+
+function saveBackgroundSettings(settings) {
+    try {
+        localStorage.setItem(backgroundSettingsKey, JSON.stringify(settings));
+    } catch (error) {
+        // La página continúa funcionando si el almacenamiento está deshabilitado.
+    }
+}
+
+function applyBackgroundSettings(settings) {
+    const display = ['center', 'tile', 'contain', 'cover'].includes(settings.display) ? settings.display : defaultBackgroundSettings.display;
+    const opacity = Math.min(100, Math.max(0, Number(settings.opacity) || 0));
+    const color = /^#[0-9a-f]{6}$/i.test(settings.color) ? settings.color : defaultBackgroundSettings.color;
+    background.className = 'background-' + display;
+    document.body.classList.toggle('background-tile', display === 'tile');
+    document.documentElement.style.setProperty('--background-opacity', opacity / 100);
+    document.documentElement.style.setProperty('--background-image', 'url("' + background.src + '")');
+    document.documentElement.style.setProperty('--background-color', color);
+    displaySelect.value = display;
+    opacityInput.value = opacity;
+    opacityValue.value = opacity + '%';
+    opacityValue.textContent = opacity + '%';
+    backgroundColorInput.value = color;
+    return { display, opacity, color };
+}
+
+let backgroundSettings = applyBackgroundSettings(readBackgroundSettings());
+
+configToggle.addEventListener('click', () => {
+    const isOpen = imageConfig.classList.toggle('is-open');
+    configToggle.setAttribute('aria-expanded', isOpen);
+});
+
+displaySelect.addEventListener('change', () => {
+    backgroundSettings.display = displaySelect.value;
+    backgroundSettings = applyBackgroundSettings(backgroundSettings);
+    saveBackgroundSettings(backgroundSettings);
+});
+
+opacityInput.addEventListener('input', () => {
+    backgroundSettings.opacity = opacityInput.value;
+    backgroundSettings = applyBackgroundSettings(backgroundSettings);
+    saveBackgroundSettings(backgroundSettings);
+});
+
+backgroundColorInput.addEventListener('input', () => {
+    backgroundSettings.color = backgroundColorInput.value;
+    backgroundSettings = applyBackgroundSettings(backgroundSettings);
+    saveBackgroundSettings(backgroundSettings);
+});
+
 function checkTime(i) {
     if (i < 10) {
         i = "0" + i;

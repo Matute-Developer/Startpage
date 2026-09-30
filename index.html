@@ -12,7 +12,7 @@
       <link rel="stylesheet" href="./css/mobile.css">
    </head>
    <body>
-      <img id="imagen"  src="assets/enzo (2).jpeg" style="width: 1930px;" preload="none"></img>
+      <img id="imagen" src="assets/enzo (2).jpeg" alt="Fondo de pantalla" preload="none">
 	    <!-- particles.js container --> 
 	   <div id="particles-js"></div> <!-- stats - count particles --> 
 	   <div class="count-particles"> 
@@ -50,6 +50,22 @@
             </div>
          </div>
       </div>
+      <aside id="image-config" class="image-config" aria-label="Configuración de la imagen de fondo">
+         <button id="image-config-toggle" class="image-config__toggle" type="button" aria-expanded="false" aria-controls="image-config-panel"><span aria-hidden="true">⚙</span> Fondo</button>
+         <div id="image-config-panel" class="image-config__panel">
+            <label for="image-display">Visualización</label>
+            <select id="image-display">
+               <option value="center">Centrada</option>
+               <option value="tile">Mosaico</option>
+               <option value="contain">Ajustar a la página</option>
+               <option value="cover">Ajustar todo</option>
+            </select>
+            <label for="image-opacity">Opacidad <output id="image-opacity-value" for="image-opacity">100%</output></label>
+            <input id="image-opacity" type="range" min="0" max="100" value="100">
+            <label for="background-color">Color de fondo</label>
+            <input id="background-color" type="color" value="#fefeff">
+         </div>
+      </aside>
       <script src="./js/index.js"></script>
 	  <script src="./js/particles.min.js"></script> 
 	  <script src="./js/particles.js"></script>

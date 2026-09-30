@@ -1,13 +1,14 @@
 #imagen {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     z-index: -1;
-    transform: scale(1.4);
-    transform-origin: center 15%;
+    object-position: center center;
+    opacity: var(--background-opacity, 1);
+    transition: opacity .2s ease, object-fit .2s ease;
 }
 
 *{
@@ -18,7 +19,7 @@
 
 body {
     font-family: 'Helvetica', sans-serif;
-    background-color: #fefeff;
+    background-color: var(--background-color, #fefeff);
     overflow-y: hidden;
 
 }
@@ -116,3 +117,62 @@ footer a:hover{
 #busqueda{
     width: 57%;
 }
+
+body::before {
+    content: "";
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: var(--background-image);
+    background-repeat: repeat;
+    background-position: center;
+    opacity: var(--background-opacity, 1);
+}
+
+body.background-tile::before { display: block; }
+body.background-tile #imagen { opacity: 0; }
+#imagen.background-center { object-fit: none; }
+#imagen.background-contain { object-fit: contain; }
+#imagen.background-cover { object-fit: cover; }
+
+.image-config {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 200;
+    color: #fff;
+    font-family: Roboto, Helvetica, sans-serif;
+    opacity: .42;
+    transition: opacity .2s ease;
+}
+
+.image-config:hover,
+.image-config:focus-within,
+.image-config.is-open { opacity: 1; }
+
+.image-config__toggle {
+    padding: .65rem .85rem;
+    border-radius: .55rem;
+    background: rgba(12, 16, 25, .72);
+    color: inherit;
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+
+.image-config__panel {
+    display: none;
+    width: 220px;
+    margin-top: .5rem;
+    padding: .85rem;
+    border-radius: .55rem;
+    background: rgba(12, 16, 25, .82);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, .28);
+}
+
+.image-config.is-open .image-config__panel { display: grid; gap: .45rem; }
+.image-config label { font-size: 1.2rem; }
+.image-config output { float: right; }
+.image-config select,
+.image-config input { width: 100%; }
+.image-config select { padding: .4rem; border-radius: .3rem; color: #222; }
