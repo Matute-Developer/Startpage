@@ -36,11 +36,15 @@ body {
     transform: translateY(-8rem);
 }
 
-#clock{
-    text-align: center;
+#clock {
+    position: fixed;
+    top: 20px;
+    left: 30px;
     color: #fff;
     font-weight: 800;
     font-size: 7.5rem;
+    z-index: 100;
+    margin: 0;
 }
 
 #content {
