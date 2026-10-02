@@ -225,3 +225,25 @@ body.background-tile #imagen { opacity: 0; }
 .image-config select,
 .image-config input { width: 100%; }
 .image-config select { padding: .4rem; border-radius: .3rem; color: #222; }
+
+#motivationDiv {
+  font-weight: 800;
+  font-size: 1.2rem;      /* más grande para que se lean las franjas */
+  letter-spacing: 1px;
+
+  /* franjas de la bandera: celeste / blanco / celeste */
+  background: linear-gradient(
+    to bottom,
+    #74ACDF 0%,   #74ACDF 33%,
+    #ffffff 33%,  #ffffff 66%,
+    #74ACDF 66%,  #74ACDF 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* contorno y sombra */
+  -webkit-text-stroke: 0.8px #0b3d91;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .7));
+}
