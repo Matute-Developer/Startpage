@@ -37,17 +37,16 @@ body {
 }
 
 #clock {            /* usá el selector que tengas */
-  position: fixed !important;
-  top: 24px !important;
-  left: 24px !important;
+ position: fixed !important;
+  top: calc(50% + 120px) !important;   /* altura: ajustá este número */
+  left: 50% !important;
   right: auto !important;
   bottom: auto !important;
-  transform: none !important;
+  transform: translateX(-50%) !important;
   margin: 0 !important;
-  text-align: left !important;
+  text-align: center !important;
   width: auto !important;
   z-index: 10;
-
   font-weight: 800;
   letter-spacing: 2px;
 
