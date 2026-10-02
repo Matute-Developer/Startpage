@@ -36,21 +36,12 @@ body {
     transform: translateY(-8rem);
 }
 
-#clock {
-    position: fixed !important;
-    top: 20px !important;
-    left: 30px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: none !important;
-
-    text-align: left !important;
-    color: #fff;
-    font-weight: 800;
-    font-size: 5rem;
-    line-height: 1;
-    z-index: 1000;
+.clock { /* O #clock, según cómo lo tengas nombrado en tu HTML */
+  position: absolute;
+  top: 20px;     /* Distancia desde el borde superior */
+  left: 20px;    /* Distancia desde el borde izquierdo */
+  transform: none; /* Elimina cualquier centrado previo con transform */
+  margin: 0;
 }
 
 #content {
