@@ -37,14 +37,16 @@ body {
 }
 
 #clock {            /* usá el selector que tengas */
-  position: fixed;
-  top: 24px;
-  left: 24px;
-  right: auto;
-  bottom: auto;
-  transform: none;
-  margin: 0;
-  text-align: left;
+  position: fixed !important;
+  top: 24px !important;
+  left: 24px !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  margin: 0 !important;
+  text-align: left !important;
+  width: auto !important;
+  z-index: 10;
 
   font-weight: 800;
   letter-spacing: 2px;
