@@ -38,7 +38,7 @@ body {
 
 #clock {            /* usá el selector que tengas */
  position: fixed !important;
-  top: calc(50% + 120px) !important;   /* altura: ajustá este número */
+  top: calc(50% + 160px) !important;
   left: 50% !important;
   right: auto !important;
   bottom: auto !important;
@@ -65,6 +65,10 @@ body {
   /* contorno y sombra para que resalte sobre el fondo */
   -webkit-text-stroke: 1px #0b3d91;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .55));
+}
+
+#content {
+  translate: 0 40px;
 }
 
 #content {
