@@ -36,16 +36,34 @@ body {
     transform: translateY(-8rem);
 }
 
-.clock { /* Reemplaza .clock por el ID o clase de tu reloj */
-  position: absolute;
-  top: 15px;         /* Espacio respecto al borde superior (debajo de la barra) */
-  left: 20px;        /* Espacio respecto al borde izquierdo */
-  transform: none;   /* Elimina cualquier centrado previo */
+#clock {            /* usá el selector que tengas */
+  position: fixed;
+  top: 24px;
+  left: 24px;
+  right: auto;
+  bottom: auto;
+  transform: none;
   margin: 0;
-  
-  /* Mantiene el texto blanco con la sombra para buena visibilidad */
-  color: #ffffff;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: left;
+
+  font-weight: 800;
+  letter-spacing: 2px;
+
+  /* franjas de la bandera: celeste / blanco / celeste */
+  background: linear-gradient(
+    to bottom,
+    #74ACDF 0%,   #74ACDF 33%,
+    #ffffff 33%,  #ffffff 66%,
+    #74ACDF 66%,  #74ACDF 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  /* contorno y sombra para que resalte sobre el fondo */
+  -webkit-text-stroke: 1px #0b3d91;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .55));
 }
 
 #content {
