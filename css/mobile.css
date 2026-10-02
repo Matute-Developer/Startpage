@@ -36,12 +36,16 @@ body {
     transform: translateY(-8rem);
 }
 
-.clock { /* O #clock, según cómo lo tengas nombrado en tu HTML */
+.clock { /* Reemplaza .clock por el ID o clase de tu reloj */
   position: absolute;
-  top: 20px;     /* Distancia desde el borde superior */
-  left: 20px;    /* Distancia desde el borde izquierdo */
-  transform: none; /* Elimina cualquier centrado previo con transform */
+  top: 15px;         /* Espacio respecto al borde superior (debajo de la barra) */
+  left: 20px;        /* Espacio respecto al borde izquierdo */
+  transform: none;   /* Elimina cualquier centrado previo */
   margin: 0;
+  
+  /* Mantiene el texto blanco con la sombra para buena visibilidad */
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 #content {
